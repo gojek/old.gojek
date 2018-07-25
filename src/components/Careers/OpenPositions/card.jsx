@@ -12,7 +12,7 @@ class Card extends Component {
                             {data.position}
 						</a>
                     </h4>
-                    <a href={"/careers/" + data.positionSlug} target="_blank" className="h4 btn btn-link col-md-4 font-lg d-md-none text-green">{data.position}
+                    <a href={"/careers/" + data.positionSlug} target="_blank" className="h4 btn btn-link col-md-4 font-lg d-md-none text-green text-elipsis">{data.position}
 					</a>
 
                     <p className=" col-md-4 font-xs-l text-lg-left text-center">{data.place}</p>

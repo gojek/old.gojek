@@ -11,7 +11,7 @@ class Careers extends Component {
 	    return(
       		<div className="first-section">
 			  	<Helmet>
-					<title> GO-JEK Careers </title>
+					<title> GO-JEK Tech Careers </title>
 				</Helmet>
 
         		<Banner />

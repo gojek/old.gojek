@@ -22,7 +22,7 @@ class Card extends Component {
                                         {data.name}
                                     </a>
                                 </h5>
-                                <p className="font-xs-l roboto-regular ">
+                                <p className="font-xs-l roboto-regular px-2 px-md-0">
                                     {data.text}
                                 </p>
 
@@ -45,7 +45,7 @@ class Card extends Component {
                                     {data.name}
                                 </a>
                             </h5>
-                            <p className="font-xs-l roboto-regular">
+                            <p className="font-xs-l roboto-regular px-2 px-md-0">
                                 {data.text}
                             </p>
 

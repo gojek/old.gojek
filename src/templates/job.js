@@ -1,23 +1,41 @@
 import React from "react"
 import { Helmet } from "react-helmet";
+import Link, { navigateTo } from 'gatsby-link';
 
 import * as PropTypes from "prop-types"
 import Bootstrap from 'bootstrap';
 
 class PostTemplate extends React.Component {
-	static propTypes = {
-		data: PropTypes.shape({
-			jobsJson: PropTypes.object.isRequired,
-		}),
+	constructor(props) {
+		super(props);
+		this.handleClick = this.handleClick.bind(this);
 	}
+	
+	static propTypes = {
+    	data: PropTypes.shape({
+      		jobsJson: PropTypes.object.isRequired,
+    	}),
+	}
+
+	handleClick (evt) {
+		navigateTo({
+			pathname: '/apply',
+			state: {
+			  id: this.props.data.jobsJson.id,
+			  path: this.props.data.jobsJson.positionSlug,
+			  name: this.props.data.jobsJson.position,
+			  place:  this.props.data.jobsJson.place,
+			  jobId: this.props.data.jobsJson.jobId
+			},
+		  })
+	  }
 
 	render() {
 		const { jobsJson } = this.props.data;
-
 		return (
 			<div>
 				<Helmet>
-					<title> GO-JEK Job Description </title>
+					<title> GO-JEK Tech Job Description </title>
 				</Helmet>
 
 				<section className="">
@@ -29,7 +47,17 @@ class PostTemplate extends React.Component {
 							<div className="col-lg-10 offset-lg-1">
 								<h1 className="h2 font-xl text-left text-black">{jobsJson.position}</h1>
 								<div className="text-left">
-									<a href={jobsJson.link} target="_blank" className=" text-center btn bg-green text-white raleway-bold text-uppercase my-1 font-md challenging-button custom-btn">APPLY NOW </a>
+									{/* {(jobsJson.positionSlug === "ios-engineer" ||jobsJson.positionSlug ===  "android-engineer") ? (
+											<a href={jobsJson.link} target="_blank" className=" text-center btn bg-green text-white raleway-bold text-uppercase my-1 font-md challenging-button custom-btn">APPLY NOW </a>
+										) : ( */}
+											<button
+										onClick={ this.handleClick}
+										target = "_blank"
+										className = "text-center btn bg-green text-white raleway-bold text-uppercase my-1 font-md challenging-button custom-btn"
+									>
+										APPLY NOW
+									</button>
+										{/* )} */}
 								</div>
 							</div>
 						</div>
@@ -82,7 +110,7 @@ class PostTemplate extends React.Component {
 															<div className="d-flex flex-column">
 
 																<div className="col-sm-12">
-																	<p className="pl-3  text-lg-left text-center  font-sm">
+																	<p className="pl-3  text-lg-left font-sm">
 																		{jobsJson.overview}
 																	</p>
 																	<p className="pl-3 font-sm  text-lg-left text-center ">In other words, it will need </p>
@@ -184,15 +212,23 @@ class PostTemplate extends React.Component {
 							}
 						</div>
 					</div>
-
-
 				</section>
 
 				<section className="bg-green roboto-regular">
 					<div className="container py-5">
 						<h1 className="h2 font-xl  text-center text-white">Think you fit the bill?</h1>
 						<div className="text-center ">
-							<a href={jobsJson.link} target="_blank" className=" text-center btn bg-white text-green raleway-bold text-uppercase my-1 font-md challenging-button custom-btn">APPLY NOW </a>
+						{/* {(jobsJson.positionSlug === "ios-engineer" ||jobsJson.positionSlug ===  "android-engineer") ? (
+											<a href={jobsJson.link} target="_blank" className=" text-center btn bg-green text-white raleway-bold text-uppercase my-1 font-md challenging-button custom-btn">APPLY NOW </a>
+										) : ( */}
+											<button
+										onClick={ this.handleClick}
+										target = "_blank"
+										className = " text-center btn bg-white text-green raleway-bold text-uppercase my-1 font-md challenging-button custom-btn"
+									>
+										APPLY NOW
+									</button>
+										{/* )} */}
 						</div>
 					</div>
 				</section>
@@ -210,12 +246,14 @@ export const pageQuery = graphql`
 					id
 	  positionSlug
 				link
+				place
 				responsibilities
 				position
 				roles
 				scope
 				overview
 				about
+				jobId
 			  }
 			}
 `

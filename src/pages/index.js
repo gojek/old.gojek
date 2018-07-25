@@ -15,7 +15,7 @@ class IndexPage extends Component {
 		return(
 			<div>
 				<Helmet>
-					<title> GO-JEK TECH </title>
+					<title> GO-JEK Tech </title>
 				</Helmet>
 
 				<Carousel />
