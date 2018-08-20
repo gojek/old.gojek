@@ -92,6 +92,13 @@ class PostTemplate extends React.Component {
 												aria-selected="false">EXPERIENCE & SKILLS</a>
 										</li>
 									}
+									{
+										jobsJson.skills !== "" &&
+										<li className="nav-item">
+											<a className="nav-link jd-tab roboto-bold" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills"
+												aria-selected="false">SKILLS & QUALIFICATIONS</a>
+										</li>
+									}
 
 								</ul>
 							</div>

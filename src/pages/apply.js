@@ -1,7 +1,8 @@
 import React from "react";
 import axios from 'axios';
 import { Helmet } from "react-helmet";
-import Link, { navigateTo } from 'gatsby-link';
+import { navigateTo } from 'gatsby-link';
+import swal from 'sweetalert';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -50,11 +51,8 @@ export default class Contact extends React.Component {
   }
 
   handleSubmit = e => {
-    this.setState({ loading: true })
     e.preventDefault();
-    const form = e.target;
     const { candidate_first_name, candidate_last_name, candidate_email, candidate_phone, resume, years_of_experience, preferred_location, githubLink, sourceFrom } = this.state;
-
     if(! candidate_first_name) {
         this.setState({candidate_first_name_required: true});
     }
@@ -92,7 +90,10 @@ export default class Contact extends React.Component {
         ],
         "source" : "https://www.gojek.io/"
     };
+    
     if(candidate_first_name && candidate_email && preferred_location && years_of_experience && resume && sourceFrom) {
+        
+        this.setState({ loading: true })
         axios({
             method: 'post',
             url: 'https://jsapi.recruiterbox.com/v1/openings/' + this.props.location.state.jobId + '/apply?client_name=gojek',
@@ -102,9 +103,10 @@ export default class Contact extends React.Component {
             data: JSON.stringify(payload),
         }).then(res => {
             this.setState({ loading: false });
-            navigateTo(form.getAttribute("action"));
+            navigateTo("/thank-you/");
         }).catch(err => {
             this.setState({ loading: false });
+            swal('', 'Not a valid file format for resume. Allowed formats are (doc, txt, html, htm, rtf, docx, odt, pdf)', 'error');
         });
     } 
   };
@@ -160,9 +162,7 @@ getFileString() {
     const data = this.props.location.state;
     
     return (
-        <section className=
-            {"first-section gray-bg " + (this.state.loading === true ? 'loading' : '')}
-        >
+        <section>
 
         <Helmet>
 		    <title> GO-JEK Tech Apply</title>
@@ -241,7 +241,7 @@ getFileString() {
 
                     <div className="col-md-5 col-12">
                         <input 
-                            type="text" 
+                            type="tel" 
                             className="mt-3 form-control custom-form-control roboto-regular" 
                             placeholder="Enter contact number"
                             required  
@@ -283,7 +283,8 @@ getFileString() {
                 <div className="d-flex flex-row flex-wrap justify-content-around">
 					<div className="col-md-5 col-12">
 						<input 
-                            type="text" 
+                            type="number" 
+                            min="1"
                             className={"mt-3 form-control custom-form-control roboto-regular " + (this.state.years_of_experience_required ? 'has-danger' : '')}
                             placeholder="Years of experience"
                             required  
@@ -359,7 +360,14 @@ getFileString() {
 				</div>
                 
 				<div className="text-center mt-5 pb-5">
-					<button type="submit" className="btn btn-success px-5" >Submit</button>
+                    {
+                        this.state.loading === true &&
+                        <button type="submit" className="btn btn-success px-5 disabled" >Submit <i className="fa fa-spinner fa-spin"></i></button>
+                    }
+                    {
+                        this.state.loading === false &&
+                        <button type="submit" className={"btn btn-success px-5 " + ((this.state.candidate_first_name && this.state.candidate_email && this.state.preferred_location && this.state.years_of_experience && this.state.resume && this.state.sourceFrom) ? '' : 'disabled')} >Submit</button>
+                    }
 				</div>
 			</form>
 		</div>

@@ -214,5 +214,35 @@
       "Experience compiling and presenting business & technology options, backed by data & experimentation, to decision makers",
       "At least two years of software engineering, data science, or systems engineering experience"
     ]
+  },
+  {
+    "id": "6",
+    "positionSlug": "product-analyst",
+    "position": "Product Analyst",
+    "jobId" : "fk0fx88",
+    "overview": "",
+    "place": "Bangalore, Jakarta, Singapore",
+    "roles": [],
+    "scope": [],
+    "link": "https://gojek.recruiterbox.com/jobs/fk0fx88?cjb_hash=O_PhLS15&apply_now=true&utm_source=gojek.io.website&utm_campaign=Full%20Stack%20Developer",
+    "about": [],
+    "responsibilities": [
+      "You will work as a partner with product managers / business owners helping them set the right metrics to be measuredfor a particular product/ business.",
+      "You will incorporate intelligence into the product’s design. Eg: Developing and incorporating a statistical model as part ofthe restaurant search or driver incentives systems etc., which makes the systems respond intelligently to context.",
+      "You will work in tandem with product managers to provide insights and suggest product changes which can berationalized by data patterns",
+      " You should be able to design A/B tests and experimentation for product features, analyse how the key metrics respondand evaluate, whether to increase exposure or stop the experiment. Eg: Optimising redemption percentages for discountvouchers given to users through 2 different channels: real time user data or historical user data.",
+      "You will engage and partner with various teams in product and engineering to conduct research and gather informationfrom various sources and tools.",
+      "You will gather, analyse and distribute intelligence on products, competitors and customer behaviour across differentplatforms to drive product and business decision-making."
+    ],
+    "skills": [
+      "2+ Years of experience solving product/business problems by designing and implementing analytics pipelines.",
+      "Bachelors/Masters Degree/equivalent in Computer Science/Statistics/ Applied Mathematics from top institutes.",
+      "Experience in either R or Python and SQL.",
+      "Strong understanding and experience with predictive / analytical modelling techniques, theories, principles, and practices.",
+      "Ability to hypothesize, provoke and test ideas scientifically with statistical rigour.",
+      "Capacity to model problems and situations mathematically.",
+      "Excellent presentation skills and have the confidence to present in front of a large audience.",
+      "Curiosity to keep oneself informed with the latest developments and frameworks from the analytics world."
+    ]
   }
 ]
