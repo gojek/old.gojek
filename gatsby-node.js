@@ -9,7 +9,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     config.loader("null", {
       test: /bootstrap/,
       loader: "null-loader",
-    });
+    })
   }
 };
 
