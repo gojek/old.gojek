@@ -11,7 +11,7 @@ class Card extends Component {
         
         if(data.mainBanner) {
             return(
-                <div className="row">
+                <div className="row mx-0">
                     <div className="col-md-8 order-sm-2 pb-sm-2 pb-md-5">
                         <img 
                             className="img-fluid" 

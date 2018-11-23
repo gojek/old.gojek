@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, isValidElement } from 'react';
 import axios from 'axios';
 import { Helmet } from "react-helmet";
 import { navigateTo } from 'gatsby-link';
 import swal from 'sweetalert';
-
+// const {
+//   FormWithConstraints,
+//   FieldFeedbacks,
+//   FieldFeedback
+// } = ReactFormWithConstraints;
 class TestApply extends Component {
     constructor(props) {
         super(props);
@@ -19,19 +23,49 @@ class TestApply extends Component {
             githubLink: "",
             sourceFrom: "",
             fileLabel: "Please upload your resume",
-            loading: false
-        }
+            loading: false,
+            error: false,
+            errorMessage: ''
+        }    
 
         this.handleChange = this.handleChange.bind(this);
         this.onFileChange = this.onFileChange.bind(this);
         
     }
-
+    
     handleChange(evt) {
+        var validated = false;
         this.setState({
             [evt.target.name]: evt.target.value
         });
+
+        if (evt.target.checkValidity() === false) {
+            evt.target.classList.add('error-invalid');
+            evt.target.nextElementSibling.classList.add('d-block');
+            validated = false;
+        } else {
+            evt.target.classList.remove('error-invalid');
+            evt.target.nextElementSibling.classList.remove('d-block');
+            validated = true;
+        }
+        
     }
+
+    // validateEmail(email) {
+    //     console.log('email', email)
+    //     const pattern = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
+    //     const result = pattern.test(email);
+    //     if (result === true) {
+    //         this.setState({
+    //             emailError:false,
+    //             email: email
+    //         })
+    //     } else {
+    //         this.setState({
+    //             emailError: true
+    //         })
+    //     }
+    // }    
 
     onFileChange(e, file) {
         var file = file || e.target.files[0],
@@ -89,8 +123,9 @@ class TestApply extends Component {
                     }
                   }
                 ],
-                "source" : "https://www.gojek.io/"
+                "source" : this.props.location.state.referer
             };
+            console.log('Payload', payload);
             axios({
                 method: 'post',
                 url: 'https://jsapi.recruiterbox.com/v1/openings/' + this.props.location.state.jobId + '/apply?client_name=gojek',
@@ -99,11 +134,37 @@ class TestApply extends Component {
                 },
                 data: JSON.stringify(payload),
             }).then(res => {
-                this.setState({ loading: false });
+                this.setState({ loading: false, error: false });
                 navigateTo("/thank-you/");
             }).catch(err => {
-                this.setState({ loading: false });
-                swal('', 'Not a valid file format for resume. Allowed formats are (doc, txt, html, htm, rtf, docx, odt, pdf)', 'error');
+                this.setState({
+                    loading: false,
+                    error: true,
+                });
+                let test = [];
+                err.response.data.errors.map(function(error) {
+                    let key = Object.keys(error);
+                    // error[key].forEach((element, index) => {
+                        console.log('Here', key[0].split("_"))
+                        
+                        var text = '';
+
+                        key[0].split("_").forEach((element, index) => {
+                            let char = element.charAt(0).toUpperCase() + element.slice(1) ;
+                            text += index === 0 ? ' '+char: ' ' + element;
+                        });
+
+                        test.push(<li className="text-danger text-left" key={key}>{text} : {error[key]}
+                        </li>);
+                    // });
+
+                });
+                
+                this.setState({
+                    errorMessage: test
+                })
+                // this.setState({ loading: false });
+                // swal('', 'Not a valid file format for resume. Allowed formats are (doc, txt, html, htm, rtf, docx, odt, pdf)', 'error');
             });
         }
     }
@@ -114,7 +175,7 @@ class TestApply extends Component {
         return(
             <section className="container text-center py-5 first-section">
             <Helmet>
-                <title> GO-JEK Tech Apply</title>
+                <title>{ data !== undefined ? data.name : 'GO-JEK Tech Apply' } </title>
             </Helmet>
             <h2 className="raleway-extrabold font-xl text-black mb-0">{ data !== undefined ? data.name : '' }</h2>
             <p className="font-sm raleway-bold text-success text-uppercase">{ data !== undefined ? data.place : '' }</p>
@@ -148,7 +209,7 @@ class TestApply extends Component {
                                 onChange={this.handleChange} 
                                 name="lastName"
                             />
-
+                            <div></div>
                         </div>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-around mt-md-5 mt-sm-0">
@@ -163,7 +224,7 @@ class TestApply extends Component {
                                 name="email"
                             />
                             <div className="invalid-feedback">
-                            Invalid email.
+                                    Invalid Email.
                             </div>
                         </div>
 
@@ -173,14 +234,15 @@ class TestApply extends Component {
                                 className="mt-3 form-control border-top-0 border-left-0 border-right-0" 
                                 id="contact-number" 
                                 placeholder="Enter Contact number"
-                                pattern="[7-9]{1}[0-9]{9}" 
+                                pattern="[0-9+?]*" 
                                 onChange={this.handleChange}
                                 name="phone"
                                 required
                             />
-                            <div className="invalid-feedback">
+                          <div className="invalid-feedback">
                                 Invalid contact number.
                             </div>
+                               
                         </div>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center py-5" id="drop_zone">
@@ -239,6 +301,7 @@ class TestApply extends Component {
                                 <option value="Bangalore">Bangalore</option>
                                 <option value="Jakarta">Jakarta</option>
                                 <option value="Singapore">Singapore</option>
+                                <option value="Thailand">Thailand</option>
 
                             </select>
                             <small className="text-success">* Potential employees can work only from the country of origin.</small>
@@ -280,7 +343,7 @@ class TestApply extends Component {
                                     <option value="Blog">Blog</option>
                                     <option value="Radio">Radio</option>
                                     <option value="Hoarding/Print">Hoarding/Print</option>
-                                    <option value="Word of Mouth">Word of Mouth</option>
+                                    <option value="Word of mouth">Word of Mouth</option>
                                     <option value="From a Friend">From a Friend</option>
                                     <option value="Google">Google</option>
                                 </select>
@@ -290,6 +353,13 @@ class TestApply extends Component {
                             </div>
                         </div>
                     </div>
+                    {
+                        this.state.error &&
+                        <div className="alert alert-danger mt-4 mx-5" role="alert">
+                            <ul>{ this.state.errorMessage }</ul>
+                        </div>
+                    }
+
                     <div className="mt-5 pb-5">
                         {
                             this.state.loading === true &&

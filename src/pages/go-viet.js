@@ -6,7 +6,7 @@ class GojekViet extends Component {
         return (
             <section className="first-section pt-3">
                 <Helmet>
-					<title> GO-JEK Tech Expansion </title>
+					<title> GO-VIET expands services to 12 districts </title>
 				</Helmet>
                 <div className="container">
                     <div className="row">

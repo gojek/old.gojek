@@ -35,8 +35,8 @@ class About extends Component {
                         <img className="img-fluid" src="../images/about/local-ojeks.png" />
                     </div>
                 <div className=" pt-5 col-lg-4 col-md-5 col-8 text-center text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h2 className="text-green font-lg raleway-bold text-uppercase">IN 2010</h2>
-                    <h4 className = " roboto-regular font-xl-l" > GO - JEK started with a mission to improve the livelihoods of local ojeks (motorcycle taxis) 
+                        <h2 className="text-green font-lg roboto-black text-uppercase">IN 2010</h2>
+                    <h4 className = " roboto-regular font-xl-l aboutFont" > GO - JEK started with a mission to improve the livelihoods of local ojeks (motorcycle taxis) 
                     </h4>
                 </div>
             </div>
@@ -51,8 +51,8 @@ class About extends Component {
                
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase ">In the beginning</h2>
-                < h4 className = " roboto-regular font-xl-l" > Every customer was ‘matched’ manually with a driver via a call center. </h4>
+                        <h2 className="text-green font-lg roboto-black  text-uppercase ">In the beginning</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" > Every customer was ‘matched’ manually with a driver via a call center. </h4>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                     <img className="img-fluid" src="../images/about/customer-care.png" />
@@ -70,8 +70,8 @@ class About extends Component {
                     <img className="img-fluid" src="../images/about/automated-machine.png" />
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">IN 2015</h2>
-                < h4 className = " roboto-regular font-xl-l" >A version of the app was launched to automate the matchmaking</h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">IN 2015</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >A version of the app was launched to automate the matchmaking</h4>
                 </div>
             </div>
 
@@ -84,8 +84,8 @@ class About extends Component {
             </div>
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h2 className="text-green font-lg raleway-bold text-uppercase">By mid-2015</h2>
-                    < h4 className = " roboto-regular font-xl-l" >Orders scaled from <strong>3,000 to 100,000 </strong>a day. GO-JEK was becoming indispensable. By end of 2015 - systems were crashing because of a major spike in volumes</h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">By mid-2015</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >Orders scaled from <strong>3,000 to 100,000 </strong>a day. GO-JEK was becoming indispensable. By end of 2015 - systems were crashing because of a major spike in volumes</h4>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                     <img className="img-fluid" src="../images/about/scaled-order.png" />
@@ -105,9 +105,9 @@ class About extends Component {
                     <img className="img-fluid" src="../images/about/niranjan-paranjape.png" />
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">End of 2015</h2>
-                < h4 className = " roboto-regular font-xl-l" >Niranjan Paranjape  rewrote a key piece of technology in golang in under 3 days. </h4>
-                    <button className="btn btn-success btn-sm text-uppercase px-5">read his story here</button>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">End of 2015</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >Niranjan Paranjape  rewrote a key piece of technology in golang in under 3 days. </h4>
+                        <a href="https://blog.gojekengineering.com/how-go-jek-manages-1-million-drivers-with-12-engineers-part-1-978af9ccfd32" target="_blank"><button className="btn btn-success btn-sm text-uppercase px-5">read his story here</button></a>
                 </div>
             </div>
 
@@ -119,11 +119,11 @@ class About extends Component {
 
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">By early 2016, </h2>
-                    < h4 className = " roboto-regular font-xl-l" >By early 2016, it was smooth sailing but orders climbed to 300,000+ a day..</h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">By early 2016, </h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >By early 2016, it was smooth sailing but orders climbed to 300,000+ a day..</h4>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <img className="img-fluid" src="../images/about/300000-orders.png" />
+                        <img className="img-fluid" src="../images/about/300000-orders.png" />
                 </div>
             </div>
 
@@ -138,8 +138,8 @@ class About extends Component {
                     <img className="img-fluid" src="../images/about/driver-partners.png" />
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">Happy Driver Partners</h2>
-                < h4 className = " roboto-regular font-xl-l" >Driver incomes increased by 150% making GO-JEK a reliable partner  </h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">Happy Driver Partners</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >Driver incomes increased by 150% making GO-JEK a reliable partner  </h4>
                 </div>
 
             </div>
@@ -151,8 +151,8 @@ class About extends Component {
 
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">In mid-2016</h2>
-                    < h4 className = " roboto-regular font-xl-l" >In mid-2016, downtimes were a routine affair. Leaky faucets needed to be fixed.</h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">In mid-2016</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >In mid-2016, downtimes were a routine affair. Leaky faucets needed to be fixed.</h4>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                     <img className="img-fluid" src="../images/about/issue.png" />
@@ -165,9 +165,9 @@ class About extends Component {
 
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">The big rewrite began in 2016</h2>
-                < h4 className = "roboto-regular font-xl-l" >“No project has a budget and impact as big as this in GO-JEK’s history” - From Nadiem’s internal mail..</h4>
-                    <button className="btn btn-success btn-sm text-uppercase px-5">read the story here</button>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">The big rewrite began in 2016</h2>
+                        < h4 className= "roboto-regular font-xl-l aboutFont" >“No project has a budget and impact as big as this in GO-JEK’s history” - From Nadiem’s internal mail..</h4>
+                        <a href="https://blog.gojekengineering.com/how-go-jek-manages-1-million-drivers-with-12-engineers-part-2-35f6a27a0faf" target="_blank"><button className="btn btn-success btn-sm text-uppercase px-5">read the story here</button></a>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                     <img className="img-fluid" src="../images/about/big-rewrite.png" />
@@ -180,9 +180,9 @@ class About extends Component {
 
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">Employment opportunities.</h2>
-                    < h4 className = " roboto-regular font-xl-l" >GO-JEK employs more than 30,000 people with disabilities.</h4>
-                    <button className="btn btn-success btn-sm text-uppercase px-5">watch the video</button>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">Employment opportunities.</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >GO-JEK employs more than 30,000 people with disabilities.</h4>
+                        <a href="https://www.youtube.com/watch?v=tu-5s8KhzvQ&feature=youtu.be" target="_blank"><button className="btn btn-success btn-sm text-uppercase px-5">watch the video</button></a>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
                     <img className="img-fluid" src="../images/about/employees.png" />
@@ -194,8 +194,8 @@ class About extends Component {
 
             <div className="d-flex flex-row flex-wrap justify-content-center align-items-center section pb-5">
                 <div className="col-lg-4 col-md-5 col-8 text-center text-md-left order-2 order-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <h2 className="text-green font-lg raleway-bold text-uppercase">As of 2018</h2>
-                < h4 className = " roboto-regular font-xl-l" >GO-JEK does 100+ million orders across 18+ products Total order volume growth - 6600x </h4>
+                        <h2 className="text-green font-lg roboto-black text-uppercase">As of 2018</h2>
+                        < h4 className= " roboto-regular font-xl-l aboutFont" >GO-JEK does 100+ million orders across 18+ products Total order volume growth - 6600x </h4>
                 </div>
                 <div className="col-lg-4 col-md-5 col-8 order-1 order-md-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                     <img className="img-fluid" src="../images/about/10-million-orders.png" />

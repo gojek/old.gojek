@@ -13,6 +13,7 @@ $link-hover-decoration: none !default;
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 @import '~animate.css/animate.min.css';
+@import "~video-react/styles/scss/video-react"; 
 
 // Font classes
 .raleway-regular {
@@ -532,6 +533,33 @@ html {
     .modal-lg {
         max-width: 2000px;
     }
+    .aboutFont {
+        font-size:32px;
+    }
+    .text-block {
+        max-width: 750px;
+    }
+}
+
+// @media for mobile
+@media (min-width:320px) and (max-width:425px) {
+    .aboutFont {
+        font-size:16px;
+    }
+}
+
+// @media for below 1920 px
+@media (min-width:768px) and (max-width:1900px) {
+    .aboutFont {
+        font-size:24px;
+    }
+    .font-md {
+        font-size: 1rem;
+    }
+    
+    .text-block {
+        max-width: 650px;
+    }
 }
 
 li {
@@ -621,9 +649,9 @@ li {
 
 .fa-chevron-down {
     position: absolute;
-    top:24px;
-    right: 24px;
-    color: #828282;
+    top:10px;
+    right: 15px;
+    color: #009944;
 }
 
 select {
@@ -704,4 +732,82 @@ input[type="file"] {
 }
 .scroll {
     cursor: pointer;
+}
+.invalid,
+.form-control.error-invalid::placeholder{
+    color:#dc3545 !important;
+    display: block!important;
+}
+
+
+.error .form-control:invalid,
+.form-control.error-invalid {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    
+}
+.valid{
+    color:#000!important;
+}
+.open-position-heading {
+    letter-spacing: 1.5px;
+}
+.bg-gray {
+    background-color: #f7f7f6;
+}
+#keyword::placeholder {
+    color: #009944;
+    opacity: 1; /* Firefox */
+} 
+.careers-form .form-control::placeholder,
+.careers-form .custom-select {
+    font-family: "RaleWayRegular", sans-serif;
+}
+.form-border {
+    border: 1px solid #ccc !important;
+}
+.custom-select {
+    background: #fff none;
+}
+
+/* GoMakeImpact */
+.who-we-are {
+    background-image: url('/../images/gomakeimpact/who-are-we-banner.png');
+    background-size: cover; 
+    max-width: 100%;
+}
+// .text-block {
+//     max-width: 650px;
+// }
+.job-openings {
+    background: #e5e5e5;
+}
+.col.test img {
+transition: all .1s ease-in-out;
+}
+.col.test img.fade-in:hover {
+    transform: scale(1.05);
+    z-index: 999;
+}
+.custom-letter-spacing {
+    letter-spacing: 0.43rem;
+}
+.custom-hr {
+    width: 10%; 
+    padding: 1px;
+}
+.text-max {
+    max-width: 500px;
+}
+.scroll-down {
+    top:0%; 
+    right : 50%; 
+    margin-top: -20px; 
+    padding: 15px;
+}
+.video-react-big-play-button.video-react-big-play-button-left {
+    display: none;
+}
+.video-react .video-react-poster {
+    background-size: cover;
 }

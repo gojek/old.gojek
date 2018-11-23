@@ -24,7 +24,8 @@ class PostTemplate extends React.Component {
 			  path: this.props.data.jobsJson.positionSlug,
 			  name: this.props.data.jobsJson.position,
 			  place:  this.props.data.jobsJson.place,
-			  jobId: this.props.data.jobsJson.jobId
+			  jobId: this.props.data.jobsJson.jobId,
+			  referer: this.props.location.state === undefined ? 'https://www.gojek.io/' : this.props.location.state.referer
 			},
 		  })
 	}
@@ -47,6 +48,8 @@ class PostTemplate extends React.Component {
 				return "What will you need"
 			case 'whatWouldbeaBonus':
 				return "What would be a bonus"
+			case 'projects':
+				return "Projects you could work on"
 			default:
 				return "About";
 			
@@ -55,14 +58,13 @@ class PostTemplate extends React.Component {
 
 	render() {
 		const { jobsJson } = this.props.data;
-		
 		return (
 			<div>
 				<Helmet>
-					<title> GO-JEK Tech Job Description </title>
+					<title> { jobsJson.position } </title>
 				</Helmet>
 
-				<section className="">
+				<section className="first-section">
 					<img className="img-fluid" src="../../images/careers/job-illustration.png" />
 				</section>
 				<section className="">
@@ -112,6 +114,10 @@ class PostTemplate extends React.Component {
 													<div className="col-lg-10">
 														<div className="row pt-4"> 
 														{
+															(jobsJson.jobId === 'fk019mp' && heading === 'responsibilities') &&
+															<p>{ jobsJson.responsibilitiesOverview }</p>
+														}
+														{
 															(heading !== "overview") &&
 															<ul className="text-green" >
 																<div className="row" >
@@ -141,6 +147,9 @@ class PostTemplate extends React.Component {
 																	<div className="row">
 																	<div className="col-md-6">
 																	<p className="pl-3 font-sm  text-lg-left text-center ">{jobsJson.rolesOverview} </p>
+																	{/* {
+																		jobsJson.roles.length > 0 && 
+																	
 																		<ul className=" text-green">
 																			{
 																				jobsJson.roles.map((role, key) => (
@@ -150,9 +159,12 @@ class PostTemplate extends React.Component {
 																				))
 																			}
 																		</ul>
+																	} */}
 																		</div>
 																		<div className="col-md-6">
 																	<p className="pl-3 font-sm  text-lg-left text-center ">{jobsJson.scopeOverview} </p>
+																	{/* {
+																		jobsJson.scope.lenght > 0 &&
 																		<ul className=" text-green">
 																			{
 																				jobsJson.scope.map((role, key) => (
@@ -162,6 +174,7 @@ class PostTemplate extends React.Component {
 																				))
 																			}
 																		</ul>
+																		} */}
 																		</div>
 																	</div>
 																	</div>
@@ -170,7 +183,7 @@ class PostTemplate extends React.Component {
 
 														</div>
 														{
-															heading+'Overview' !== ""  &&
+															(jobsJson.jobId !== 'fk019mp' && heading+'Overview' !== "")  &&
 															<p className="font-md text-dark">
 																{ jobsJson[heading+'Overview'] }
 															</p>
@@ -225,14 +238,13 @@ export const pageQuery = graphql`
 		about
 		responsibilitiesOverview
 		rolesOverview
-		roles
 		scopeOverview
-		scope
 		overview
 		expectations
 		whatWillYouDo
 		whatWillYouNeed
 		whatWouldbeaBonus
+		projects
 		}
 	}
 `
