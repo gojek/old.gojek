@@ -28,9 +28,9 @@ class Careers extends Component {
 		e.preventDefault();
 		this.setState({
 			keyword:  document.getElementById("keyword").value,
-			location:  document.getElementById("location").value,
-			team:  document.getElementById("team").value,
-			department:  document.getElementById("department").value
+			location:  document.getElementById("location").value === 'all' ? "" : document.getElementById("location").value,
+			team:  document.getElementById("team").value === 'all' ? "" : document.getElementById("team").value,
+			department:  document.getElementById("department").value === 'all' ? "" : document.getElementById("department").value
 		});
 		scroller.scrollTo('myScrollToElement', {
 			smooth: "easeInOutQuint",
@@ -38,9 +38,15 @@ class Careers extends Component {
 	}
 
 	handleChange = evt => {
-		this.setState({
-            [evt.target.name]: evt.target.value
-        });
+		if(evt.target.value === 'all') {
+			this.setState({
+				[evt.target.name]: ""
+			});
+		} else {
+			this.setState({
+				[evt.target.name]: evt.target.value
+			});
+		}		
 	}
 
 	resetFilters = () => {
@@ -74,6 +80,7 @@ class Careers extends Component {
 									<label htmlFor="location" className="sr-only">Location</label>
 									<select name="location" id="location" className="custom-select form-border postion-relative" defaultValue="" onChange= { this.handleChange }>
 										<option value="" disabled>Location</option>
+										<option value="all">All</option>
 										<option value="Bangalore">Bangalore</option>
 										<option value="Jakarta">Jakarta</option>
 										<option value="Singapore">Singapore</option>
@@ -85,6 +92,7 @@ class Careers extends Component {
 									<label htmlFor="team" className="sr-only">Team</label>
 									<select name="team" id="team" defaultValue="" className="custom-select form-border postion-relative" onChange= { this.handleChange }>
 										<option value="" disabled>Team</option>
+										<option value="all">All</option>
 										<option value="Engineering">Engineering</option>
 										<option value="Marketing and Operations">Marketing and Operations</option>
 									</select>
@@ -94,6 +102,7 @@ class Careers extends Component {
 									<label htmlFor="team" className="sr-only">Department</label>
 									<select name="department" id="department" defaultValue="" className="custom-select form-border postion-relative" onChange= { this.handleChange }>
 										<option value="" disabled>Department</option>
+										<option value="all">All</option>
 										<option value="Food">Food</option>
 										<option value="Payments">Payments</option>
 										<option value="Transport">Transport</option>

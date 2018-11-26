@@ -61,7 +61,10 @@ class PostTemplate extends React.Component {
 		return (
 			<div>
 				<Helmet>
-					<title> { jobsJson.position } </title>
+					<title> { jobsJson.title } </title>
+					<meta name="description" content={ jobsJson.metaDescription } />
+					<meta name="twitter:description" content={ jobsJson.metaDescription } />
+					<meta property="og:description" content={ jobsJson.metaDescription } />
 				</Helmet>
 
 				<section className="first-section">
@@ -244,7 +247,9 @@ export const pageQuery = graphql`
 		whatWillYouDo
 		whatWillYouNeed
 		whatWouldbeaBonus
-		projects
+		projects,
+		metaDescription,
+		title
 		}
 	}
 `

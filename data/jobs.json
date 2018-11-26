@@ -60,7 +60,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "2",
@@ -123,7 +125,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "3",
@@ -186,7 +190,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "4",
@@ -249,7 +255,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "23",
@@ -292,7 +300,9 @@
     ],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "16",
@@ -335,7 +345,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "10",
@@ -381,7 +393,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "22",
@@ -428,7 +442,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "iOS Engineer Jobs available at GO-JEK. Join the group of elite engineers who build Indonesia's most used on-demand services app. Check out job description and apply today!",
+    "title": "iOS Developer Jobs, iOS Engineer Jobs | GO-JEK Careers"
   },
   {
     "id": "17",
@@ -478,7 +494,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "14",
@@ -526,7 +544,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Food",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "19",
@@ -571,7 +591,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Food",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "7",
@@ -613,7 +635,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Payments",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "15",
@@ -678,7 +702,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Payments",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "8",
@@ -719,7 +745,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Payments",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "11",
@@ -766,7 +794,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "Transport",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "5",
@@ -823,7 +853,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "6",
@@ -880,7 +912,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "9",
@@ -932,7 +966,9 @@
       "Experience in production environments with large data sets"
     ],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "12",
@@ -979,7 +1015,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "13",
@@ -1028,7 +1066,9 @@
       "Familiarity with databases including but not limited to PostgreSQL, BigQuery"
     ],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "18",
@@ -1084,7 +1124,9 @@
       "Experience with Chef, Ansible or other similar automation tools."
     ],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "24",
@@ -1124,7 +1166,9 @@
         "Analytical and data-driven, you love digging into the data to understand what’s happening and define & measure success on every project"],
       "whatWouldbeaBonus": [],
       "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "25",
@@ -1164,7 +1208,9 @@
         "Demonstrable willingness to explore & keep-up with the changing landscape of analytics tooling & methodologies"],
       "whatWouldbeaBonus": [],
       "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "26",
@@ -1205,7 +1251,9 @@
       ],
       "whatWouldbeaBonus": [],
       "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "27",
@@ -1265,7 +1313,9 @@
         "Create inhouse status dashboard.",
         "Migrate GO-JEK services to Kubernetes.",
         "Improving our TICK and Prometheus Monitoring or building new Metrics."
-      ]
+      ],
+      "metaDescription": "",
+      "title": ""
   },
   {
     "id": "28",
@@ -1307,7 +1357,9 @@
         "Developing and maintaining the platform that runs all of GO-JEK's services",
         "Own the full lifecycle of feature development from design through testing and release",
         "Reliably migrating traffic from VMs to kubernetes."
-      ]
+      ],
+      "metaDescription": "",
+      "title": ""
   },
   {
     "id": "20",
@@ -1340,7 +1392,9 @@
     "whatWillYouNeed": [],
     "whatWouldbeaBonus": [],
     "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   },
   {
     "id": "21",
@@ -1387,6 +1441,8 @@
       "whatWillYouNeed": [],
       "whatWouldbeaBonus": [],
       "department": "",
-    "projects": []
+    "projects": [],
+    "metaDescription": "",
+    "title": ""
   }
 ]
